@@ -10,9 +10,9 @@
 
     <!-- Right side content -->
     <div class="col-md-9">
+        {% if perms.auth.view_user %}
         <h2>All Users</h2>
         <a href="{% url 'add_user' %}" class="btn btn-dark text-light float-right mb-2">Add User</a>
-        {% if perms.auth.view_user %}
         <table class="table table-hover">
             <thead>
               <tr>
